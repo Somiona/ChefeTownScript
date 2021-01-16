@@ -28,24 +28,6 @@ static removeFurnace as IIngredient[] = [
 ];
 
 function machineRecipes() {
-    gt.compressor.findRecipe(2, [<projectred-core:resource_item:200> * 9], null).remove();
-    gt.compressor.recipeBuilder()
-        .inputs([<ore:gemRuby> * 9])
-        .outputs([<ore:blockRuby>.firstItem])
-        .EUt(2).duration(sec(20))
-        .buildAndRegister();
-    gt.compressor.findRecipe(2, [<projectred-core:resource_item:201> * 9], null).remove();
-    gt.compressor.recipeBuilder()
-        .inputs([<ore:gemSapphire> * 9])
-        .outputs([<ore:blockSapphire>.firstItem])
-        .EUt(2).duration(sec(20))
-        .buildAndRegister();
-    gt.compressor.findRecipe(2, [<projectred-core:resource_item:103> * 9], null).remove();
-    gt.compressor.recipeBuilder()
-        .inputs([<ore:ingotRedAlloy> * 9])
-        .outputs([<ore:blockRedAlloy>.firstItem])
-        .EUt(2).duration(sec(20))
-        .buildAndRegister();
     // Redstone Alloy cable
     gt.assembler.recipeBuilder()
         .inputs([<ore:wireFineRedAlloy> * 2])

@@ -8,8 +8,6 @@ import crafttweaker.liquid.ILiquidStack;
 static oresAdd as IItemStack[][IOreDictEntry] = {
     <ore:bamboo> : [
         <biomesoplenty:bamboo>,
-        <futureminecraf:bambooitem>,
-        <futureminecraf:bamboo2>
     ]
 };
 

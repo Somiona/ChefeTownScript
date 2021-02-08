@@ -22,36 +22,36 @@ static shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<stevescarts:blockcartassembler> : [
 		[
-			[<ore:plateSteel>, <metaitem:robot.arm.hv>, <ore:plateSteel>],
-			[<metaitem:robot.arm.hv>, <gregtech:machine_casing:3>, <metaitem:robot.arm.hv>],
+			[<ore:plateSteel>, <metaitem:robot.arm.mv>, <ore:plateSteel>],
+			[<metaitem:robot.arm.mv>, <gregtech:machine_casing:3>, <metaitem:robot.arm.mv>],
 			[<stevescarts:modulecomponents:9>, <ore:plateSteel>, <stevescarts:modulecomponents:9>]
 		]
 	],
 	<stevescarts:cartmodule:0> : [
 		[
 			[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>],
-			[<meta_tile_entity:gregtech:steam_boiler_coal_steel>, <meta_tile_entity:gregtech:steam_boiler_coal_steel>, <metaitem:electric.motor.hv>],
+			[<meta_tile_entity:gregtech:steam_boiler_coal_steel>, <meta_tile_entity:gregtech:steam_boiler_coal_steel>, <metaitem:electric.motor.mv>],
 			[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]
 		]
 	],
 	<stevescarts:cartmodule:44> : [
 		[
 			[<ore:plateSteel>, <ore:plateSteel>],
-			[<meta_tile_entity:gregtech:steam_boiler_coal_steel>, <metaitem:electric.motor.hv>],
+			[<meta_tile_entity:gregtech:steam_boiler_coal_steel>, <metaitem:electric.motor.mv>],
 			[<ore:plateSteel>, <ore:plateSteel>]
 		]
 	],
 	<stevescarts:cartmodule:69> : [
 		[
 			[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>],
-			[<meta_tile_entity:gregtech:steam_boiler_lava_steel>, <meta_tile_entity:gregtech:steam_boiler_lava_steel>, <metaitem:electric.motor.hv>],
+			[<meta_tile_entity:gregtech:steam_boiler_lava_steel>, <meta_tile_entity:gregtech:steam_boiler_lava_steel>, <metaitem:electric.motor.mv>],
 			[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]
 		]
 	],
 	<stevescarts:cartmodule:70> : [
 		[
 			[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>],
-			[<meta_tile_entity:gregtech:steam_boiler_lava_steel>, <meta_tile_entity:gregtech:diesel_generator.hv>, <metaitem:electric.motor.hv>],
+			[<meta_tile_entity:gregtech:steam_boiler_lava_steel>, <meta_tile_entity:gregtech:diesel_generator.mv>, <metaitem:electric.motor.mv>],
 			[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]
 		]
 	]
@@ -91,21 +91,21 @@ function machineRecipes() {
 	gt.assembler.recipeBuilder()
         .inputs([gt.getCirc("MV"), <ore:plateNickelZincFerrite>, <ore:lensEmerald>])
         .outputs([<stevescarts:modulecomponents:9>])
-        .EUt(500).duration(sec(10))
+        .EUt(256).duration(sec(10))
         .buildAndRegister(); 
 
 	//Advanced PCB
 	gt.assembler.recipeBuilder()
         .inputs([<stevescarts:modulecomponents:9> * 4, gt.getCirc("HV"), <ore:foilPolycaprolactam> * 2, <ore:lensEmerald>])
         .outputs([<stevescarts:modulecomponents:16>])
-        .EUt(500).duration(sec(10))
+        .EUt(480).duration(sec(10))
         .buildAndRegister(); 
 
 	//Raw Hardener
 	gt.alloy_smelter.recipeBuilder()
         .inputs([<ore:dustObsidian> * 2, <ore:dustDiamond>])
         .outputs([<stevescarts:modulecomponents:18>])
-        .EUt(900).duration(sec(10))
+        .EUt(600).duration(sec(10))
         .buildAndRegister(); 
 
 	//Chest Pane
@@ -128,7 +128,7 @@ function machineRecipes() {
 	gt.assembler.recipeBuilder()
         .inputs([<metaitem:cover.solar.panel.lv>])
         .outputs([<stevescarts:modulecomponents:44>])
-        .EUt(500).duration(sec(10))
+        .EUt(480).duration(sec(10))
         .buildAndRegister(); 
 }
 

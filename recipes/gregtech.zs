@@ -1,6 +1,7 @@
 #priority 0
 
 import crafttweaker.oredict.IOreDictEntry;
+import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.liquid.ILiquidStack;
@@ -82,13 +83,18 @@ function machineRecipes() {
 
     //Fix mistakes
     gt.centrifuge.findRecipe(5,[null],[<liquid:liquid_air>*53000]).remove();
-    gt.blast_furnace.findRecipe(3, [<nuclearcraft:dust:12>], null).remove();
 
+    val aluminiumDusts as IOreDictEntry[] = [<ore:ingotAluminium>, <ore:ingotAluminum>];
+    for od in aluminiumDusts {
+        for ore in od.items {
+            Utils.removeRecipeByOutput(gt.blast_furnace, [ore], [], false);
+        }
+    }
 
     //lava
     val lavaRecipe = FuelRecipe.create(<liquid:lava>*64, 1,32);
     mods.gregtech.recipe.RecipeMaps.SEMI_FLUID_GENERATOR_FUELS.addRecipe(lavaRecipe);
-} 
+}
 
 function run() {
 	// Un-named recipes

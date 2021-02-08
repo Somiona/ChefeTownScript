@@ -55,7 +55,7 @@ function machineRecipes() {
             <gregtech:meta_item_1:2196>,
             <gregtech:meta_item_2:32570>])
         .fluidOutputs([<liquid:methane> * 60])
-        .EUt(40).duration(sec(15))
+        .EUt(32).duration(sec(15))
         .buildAndRegister();
 
     //Barrel Recipes
@@ -82,6 +82,8 @@ function machineRecipes() {
 
     //Fix mistakes
     gt.centrifuge.findRecipe(5,[null],[<liquid:liquid_air>*53000]).remove();
+    gt.blast_furnace.findRecipe(3, [<nuclearcraft:dust:12>], null).remove();
+
 
     //lava
     val lavaRecipe = FuelRecipe.create(<liquid:lava>*64, 1,32);

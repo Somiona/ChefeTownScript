@@ -6,15 +6,9 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.liquid.ILiquidStack;
 
 static oresAdd as IItemStack[][IOreDictEntry] = {
-    <ore:bamboo> : [
-        <biomesoplenty:bamboo>,
-    ]
 };
 
 static oresRemove as IItemStack[][IOreDictEntry] = {
-    <ore:stickWood> : [
-        <biomesoplenty:bamboo>
-    ]
 };
 
 function specialWork() {

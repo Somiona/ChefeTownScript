@@ -27,18 +27,6 @@ function biomassRecipes() {
         .fluidOutputs([<liquid:biomass> * 20])
         .EUt(3).duration(sec(8))
         .buildAndRegister();
-    gt.brewer.recipeBuilder()
-        .inputs([<ore:bamboo>])
-        .fluidInputs([<liquid:honey> * 20])
-        .fluidOutputs([<liquid:biomass> * 30])
-        .EUt(3).duration(sec(12))
-        .buildAndRegister();
-    gt.brewer.recipeBuilder()
-        .inputs([<ore:bamboo>])
-        .fluidInputs([<liquid:juice> * 20])
-        .fluidOutputs([<liquid:biomass> * 30])
-        .EUt(3).duration(sec(12))
-        .buildAndRegister();
 }
 
 function machineRecipes() {

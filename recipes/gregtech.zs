@@ -27,18 +27,6 @@ function biomassRecipes() {
         .fluidOutputs([<liquid:biomass> * 20])
         .EUt(3).duration(sec(8))
         .buildAndRegister();
-    gt.brewer.recipeBuilder()
-        .inputs([<ore:bamboo>])
-        .fluidInputs([<liquid:honey> * 20])
-        .fluidOutputs([<liquid:biomass> * 30])
-        .EUt(3).duration(sec(12))
-        .buildAndRegister();
-    gt.brewer.recipeBuilder()
-        .inputs([<ore:bamboo>])
-        .fluidInputs([<liquid:juice> * 20])
-        .fluidOutputs([<liquid:biomass> * 30])
-        .EUt(3).duration(sec(12))
-        .buildAndRegister();
 }
 
 function machineRecipes() {
@@ -82,14 +70,6 @@ function machineRecipes() {
         .buildAndRegister();
 
     //Fix mistakes
-    gt.centrifuge.findRecipe(5,[null],[<liquid:liquid_air>*53000]).remove();
-
-    val aluminiumDusts as IOreDictEntry[] = [<ore:ingotAluminium>, <ore:ingotAluminum>];
-    for od in aluminiumDusts {
-        for ore in od.items {
-            Utils.removeRecipeByOutput(gt.blast_furnace, [ore], [], false);
-        }
-    }
 
     //lava
     val lavaRecipe = FuelRecipe.create(<liquid:lava>*64, 1,32);
